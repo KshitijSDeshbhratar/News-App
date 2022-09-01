@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/news">
+
+    <fragment
+        android:id="@+id/news"
+        android:name="com.example.mocknewsapp.ui.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_news_to_article"
+            app:destination="@id/articles" />
+    </fragment>
+    <fragment
+        android:id="@+id/articles"
+        android:name="com.example.mocknewsapp.ui.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" >
+        <argument
+            android:name="promocode"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
